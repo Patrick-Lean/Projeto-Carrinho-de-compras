@@ -1,12 +1,18 @@
-# Projeto Carrinho de compras
+# Projeto: Carrinho de compras
 
-Este projeto tem como finalidade testar os conhecimentos sobre introdução a programação usando o HTML e CSS como um retorno visual do que foi realizado no arquivo js. O arquivo em JavaScrip foi desenvolvido com a finalidade de trazer as funcionalidades de adicionar ao carrinho o produto e modificar o preço conforme os itens no carrinho.
+Este projeto foi desenvolvido para praticar conceitos introdutórios de programação com JavaScript. A interface em HTML e CSS apresenta visualmente as ações do script: adicionar produtos ao carrinho e atualizar o valor total conforme os itens selecionados.
 
-## O que foi usado para chegar no ponto desejado?
+## Funcionalidades
 
-- Funções para pegar o valor de uma tag
-- Alerts para testar se o valor pegado era correto
-- Função Split para separar o nome do produto do valor
-- insertAdjacentHTML para adicionar na lista de produto um novo produto
-- document.getElementById('valor-total').textContent para recuperar o texto dentro de uma tag
-- parseInt para fazer o valor separado pelo Split ser convertido para inteiro.
+- Adicionar produtos ao carrinho.
+- Atualizar o valor total dos produtos adicionados.
+
+## Tecnologias e recursos utilizados
+
+- **HTML e CSS:** estrutura e apresentação da interface.
+- **JavaScript:** implementação da lógica do carrinho.
+- **Funções e `document.getElementById()`:** acesso aos elementos da página.
+- **`split()` e `parseInt()`:** separação dos dados do produto e conversão do preço para número.
+- **`insertAdjacentHTML()`:** inclusão de produtos na lista do carrinho.
+- **`textContent`:** leitura e atualização do conteúdo exibido na página.
+- **`alert()`:** apoio na conferência de valores durante os testes.
