@@ -19,8 +19,7 @@ Este projeto foi desenvolvido para praticar conceitos introdutórios de programa
 ## ✨ Funcionalidades
 
 - ✅ Adicionar produtos ao carrinho
-- ✅ Remover produtos do carrinho
-- ✅ Atualizar quantidades de produtos
+- ✅ Limpa produtos do carrinho
 - ✅ Calcular e exibir o valor total em tempo real
 - ✅ Interface responsiva e intuitiva
 
@@ -63,9 +62,9 @@ Projeto-Carrinho-de-compras/
    - Use a extensão Live Server do VS Code
 
 3. **Interaja com o carrinho:**
-   - Digite o nome do produto
-   - Digite o preço
-   - Clique em "Adicionar" ou pressione Enter
+   - Selecione o produto
+   - Confira o preço
+   - Clique em "Adicionar"
    - Veja o total atualizar automaticamente
 
 ## 💡 Como Funciona
@@ -73,7 +72,7 @@ Projeto-Carrinho-de-compras/
 ### Fluxo Principal
 
 ```
-[Input do usuário] 
+[Seleção do produto] 
         ↓
 [Validação de dados] 
         ↓
