@@ -1,6 +1,6 @@
 # Projeto: Carrinho de Compras
 
-Um projeto educativo para praticar conceitos fundamentais de JavaScript, HTML e CSS. Implementa um carrinho de compras funcional com adicionar produtos, atualizar totais e gerenciar itens.
+Um projeto educativo para praticar conceitos fundamentais de JavaScript, HTML e CSS. A página permite adicionar ao carrinho os produtos disponíveis, calcular o total pelas quantidades informadas e limpar a lista.
 
 ## 📋 Tabela de Conteúdos
 - [Sobre](#sobre)
@@ -18,10 +18,11 @@ Este projeto foi desenvolvido para praticar conceitos introdutórios de programa
 
 ## ✨ Funcionalidades
 
-- ✅ Adicionar produtos ao carrinho
-- ✅ Limpa produtos do carrinho
-- ✅ Calcular e exibir o valor total em tempo real
-- ✅ Interface responsiva e intuitiva
+- ✅ Adicionar fones de ouvido, celulares e Oculus VR ao carrinho
+- ✅ Informar a quantidade de cada produto
+- ✅ Atualizar o total ao adicionar um produto
+- ✅ Limpar todos os produtos e reiniciar o total
+- ✅ Exibir um item de exemplo no carrinho ao abrir a página
 
 ## 🛠 Tecnologias
 
@@ -31,13 +32,11 @@ Este projeto foi desenvolvido para praticar conceitos introdutórios de programa
 
 ### Conceitos JavaScript Utilizados
 
-- `getElementById()` - Acesso aos elementos do DOM
-- `addEventListener()` - Captura de eventos (click, input)
-- `split()` e `parseInt()` - Processamento de dados
-- `insertAdjacentHTML()` - Inserção dinâmica de elementos
-- `textContent` - Leitura e atualização de conteúdo
-- Manipulação de arrays - Gerenciamento de produtos
-- Funções - Organização da lógica
+- `getElementById()` - Acesso aos elementos da página
+- `split()` e `parseInt()` - Separação dos dados do produto e cálculo do total
+- `insertAdjacentHTML()` - Inclusão de produtos na lista do carrinho
+- `textContent` e `innerHTML` - Atualização do total e limpeza da lista
+- Funções e eventos `onclick` - Ações de adicionar e limpar
 
 ## 📁 Estrutura do Projeto
 
@@ -45,8 +44,10 @@ Este projeto foi desenvolvido para praticar conceitos introdutórios de programa
 Projeto-Carrinho-de-compras/
 ├── index.html          # Estrutura HTML do carrinho
 ├── style.css           # Estilos e layout
-├── script.js           # Lógica JavaScript
-└── README.md          # Este arquivo
+├── js/
+│   └── app.js           # Lógica para adicionar produtos e limpar o carrinho
+├── assets/              # Imagens e ícones usados na interface
+└── README.md            # Este arquivo
 ```
 
 ## 🚀 Como Usar
@@ -62,47 +63,32 @@ Projeto-Carrinho-de-compras/
    - Use a extensão Live Server do VS Code
 
 3. **Interaja com o carrinho:**
-   - Selecione o produto
-   - Confira o preço
-   - Clique em "Adicionar"
-   - Veja o total atualizar automaticamente
+        - Selecione um produto no menu
+        - Informe a quantidade
+        - Clique em **Adicionar** para incluir o produto e atualizar o total
+        - Clique em **Limpar** para remover os itens e voltar o total para `R$0`
 
 ## 💡 Como Funciona
 
-### Fluxo Principal
+### Adicionar um produto
 
 ```
-[Seleção do produto] 
+[Selecionar produto e informar quantidade]
         ↓
-[Validação de dados] 
+[Verificar se a quantidade é diferente de zero]
         ↓
-[Criação do objeto produto] 
+[Adicionar a linha do produto ao carrinho]
         ↓
-[Inserção no DOM] 
-        ↓
-[Recalcular total]
+[Somar preço × quantidade ao total]
 ```
 
-### Exemplo de Uso
+O carrinho começa com um celular de `R$1400` como exemplo. Ao adicionar outro produto, o script separa o nome e o preço pelo hífen, exibe a quantidade escolhida e soma o valor correspondente ao total. Depois de adicionar, o campo de quantidade é esvaziado.
 
-```javascript
-// O script escuta cliques no botão adicionar
-// e executa a função de adicionar produto
-adicionarProduto({
-  nome: "Notebook",
-  preco: 2500.00
-});
-// Resultado: Produto aparece na lista e total é atualizado
-```
+O botão **Limpar** remove todas as linhas do carrinho, redefine o total para `R$0` e esvazia o campo de quantidade.
 
 ## 📚 O que Aprendi
 
-Este projeto reforça:
-- Manipulação do DOM com JavaScript
-- Tratamento de eventos do usuário
-- Cálculos e lógica condicional
-- Boas práticas de código limpo
-- Responsividade e UX
+O código principal está em [`js/app.js`](js/app.js). As funções `adicionar()` e `limpar()` são chamadas pelos botões definidos em `index.html`.
 
 ## 📝 Licença
 
